@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#21808d">
-    <meta name="description" content="WiFi-based human pose estimation, vital sign detection, and presence sensing through walls">
+    <meta name="theme-color" content="#c83c1e">
+    <meta name="description" content="WiFi-based through-wall survivor detection and vital sign monitoring for fire and rescue operations">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>WiFi DensePose: Human Tracking Through Walls</title>
+    <title>RescueSense: Through-Wall Detection for Fire &amp; Rescue</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
@@ -18,8 +18,8 @@
     <div class="container">
         <!-- Header -->
         <header class="header" role="banner">
-            <h1>WiFi DensePose</h1>
-            <p class="subtitle" data-i18n="dashboard.subtitle">Human Tracking Through Walls Using WiFi Signals</p>
+            <h1>RescueSense</h1>
+            <p class="subtitle" data-i18n="dashboard.subtitle">Through-Wall Survivor Detection &amp; Vital Monitoring for Fire &amp; Rescue</p>
             <div class="header-info">
                 <span class="api-version" aria-label="API version"></span>
                 <span class="api-environment" aria-label="Environment"></span>
@@ -44,11 +44,11 @@
         <!-- Dashboard Tab -->
         <section id="dashboard" class="tab-content active" role="tabpanel" aria-labelledby="dashboard">
             <div class="hero-section">
-                <h2 data-i18n="dashboard.title">Revolutionary WiFi-Based Human Pose Detection</h2>
+                <h2 data-i18n="dashboard.title">See Through Smoke and Walls — Without a Camera</h2>
                 <p class="hero-description">
-                    AI can track your full-body movement through walls using just WiFi signals. 
-                    Researchers at Carnegie Mellon have trained a neural network to turn basic WiFi 
-                    signals into detailed wireframe models of human bodies.
+                    RescueSense uses commodity WiFi signals to detect survivors through walls, floors, and smoke.
+                    Locate downed firefighters, track breathing rates, and map occupant positions in real time —
+                    all from a $9 ESP32 node, no line of sight required.
                 </p>
                 
                 <!-- Error container -->
@@ -125,15 +125,15 @@
                     <h3 data-i18n="dashboard.liveStats">Live Statistics</h3>
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <span class="stat-label">Active Persons</span>
+                            <span class="stat-label">Persons Detected</span>
                             <span class="person-count">0</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">Avg Confidence</span>
+                            <span class="stat-label">Detection Confidence</span>
                             <span class="avg-confidence">0%</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">Total Detections</span>
+                            <span class="stat-label">Survivor Contacts</span>
                             <span class="detection-count">0</span>
                         </div>
                     </div>
@@ -146,43 +146,43 @@
                 
                 <div class="key-benefits">
                     <div class="benefit-card">
-                        <div class="benefit-icon">🏠</div>
-                        <h3>Through Walls</h3>
-                        <p>Works through solid barriers with no line of sight required</p>
+                        <div class="benefit-icon">🔥</div>
+                        <h3>Through Smoke &amp; Walls</h3>
+                        <p>Penetrates smoke, fire, and solid barriers — works where cameras and eyes can't</p>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">🔒</div>
-                        <h3>Privacy-Preserving</h3>
-                        <p>No cameras or visual recording - just WiFi signal analysis</p>
+                        <div class="benefit-icon">🫁</div>
+                        <h3>Vital Sign Detection</h3>
+                        <p>Monitors breathing (6–30 BPM) and heart rate (40–120 BPM) without contact</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">⚡</div>
-                        <h3>Real-Time</h3>
-                        <p>Maps 24 body regions in real-time at 100Hz sampling rate</p>
+                        <h3>&lt;200ms Fall Alert</h3>
+                        <p>Detects a downed firefighter or civilian collapse in under 200 milliseconds</p>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">💰</div>
-                        <h3>Low Cost</h3>
-                        <p>Built using $30 commercial WiFi hardware</p>
+                        <div class="benefit-icon">📡</div>
+                        <h3>Deploy Instantly</h3>
+                        <p>$9 ESP32 nodes — deploy a mesh in seconds, no infrastructure needed</p>
                     </div>
                 </div>
 
                 <div class="system-stats">
                     <div class="stat" data-stat="body-regions">
-                        <span class="stat-value">24</span>
-                        <span class="stat-label">Body Regions</span>
+                        <span class="stat-value">&lt;200ms</span>
+                        <span class="stat-label">Fall Alert Latency</span>
                     </div>
                     <div class="stat" data-stat="sampling-rate">
                         <span class="stat-value">100Hz</span>
-                        <span class="stat-label">Sampling Rate</span>
+                        <span class="stat-label">CSI Sampling Rate</span>
                     </div>
                     <div class="stat" data-stat="accuracy">
                         <span class="stat-value">87.2%</span>
-                        <span class="stat-label">Accuracy (AP@50)</span>
+                        <span class="stat-label">Detection Accuracy</span>
                     </div>
                     <div class="stat" data-stat="hardware-cost">
-                        <span class="stat-value">$30</span>
-                        <span class="stat-label">Hardware Cost</span>
+                        <span class="stat-value">$9</span>
+                        <span class="stat-label">Per Node (ESP32)</span>
                     </div>
                 </div>
             </div>
@@ -435,64 +435,64 @@
             
             <div class="applications-grid">
                 <div class="app-card">
-                    <div class="app-icon">👴</div>
-                    <h3>Elderly Care Monitoring</h3>
-                    <p>Monitor elderly individuals for falls or emergencies without invading privacy. Track movement patterns and detect anomalies in daily routines.</p>
+                    <div class="app-icon">🔍</div>
+                    <h3>Through-Wall Search &amp; Rescue</h3>
+                    <p>Locate survivors trapped behind walls, rubble, or in smoke-filled rooms before entry. Pinpoint breathing signals and body position without breaching.</p>
                     <div class="app-features">
-                        <span class="feature-tag">Fall Detection</span>
-                        <span class="feature-tag">Activity Monitoring</span>
-                        <span class="feature-tag">Emergency Alert</span>
+                        <span class="feature-tag">Survivor Location</span>
+                        <span class="feature-tag">Breathing Detection</span>
+                        <span class="feature-tag">Pre-Entry Intel</span>
                     </div>
                 </div>
 
                 <div class="app-card">
-                    <div class="app-icon">🏠</div>
-                    <h3>Home Security Systems</h3>
-                    <p>Detect intruders and monitor home security without visible cameras. Track multiple persons and identify suspicious movement patterns.</p>
+                    <div class="app-icon">🧯</div>
+                    <h3>Firefighter Down Detection</h3>
+                    <p>Instantly alert incident command when a firefighter collapses or goes motionless inside a structure. Fall detected in under 200ms with automatic MAYDAY trigger.</p>
                     <div class="app-features">
-                        <span class="feature-tag">Intrusion Detection</span>
-                        <span class="feature-tag">Multi-person Tracking</span>
-                        <span class="feature-tag">Invisible Monitoring</span>
+                        <span class="feature-tag">Fall Alert &lt;200ms</span>
+                        <span class="feature-tag">MAYDAY Trigger</span>
+                        <span class="feature-tag">Team Tracking</span>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">🏗️</div>
+                    <h3>Structural Triage</h3>
+                    <p>Map occupant count and positions across floors before committing crews. Know which rooms are occupied, which are clear, and where to prioritize rescue.</p>
+                    <div class="app-features">
+                        <span class="feature-tag">Occupant Count</span>
+                        <span class="feature-tag">Floor-by-Floor Map</span>
+                        <span class="feature-tag">Crew Safety</span>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon">☣️</div>
+                    <h3>HAZMAT &amp; Confined Space</h3>
+                    <p>Monitor personnel vitals in IDLH environments where radio check-ins may fail. Continuous breathing and motion monitoring without line of sight.</p>
+                    <div class="app-features">
+                        <span class="feature-tag">IDLH Monitoring</span>
+                        <span class="feature-tag">Vital Sign Logging</span>
+                        <span class="feature-tag">No LoS Required</span>
                     </div>
                 </div>
 
                 <div class="app-card">
                     <div class="app-icon">🏥</div>
-                    <h3>Healthcare Patient Monitoring</h3>
-                    <p>Monitor patients in hospitals and care facilities. Track vital signs through movement analysis and detect health emergencies.</p>
+                    <h3>Mass Casualty Triage</h3>
+                    <p>Rapidly assess breathing status of multiple victims across a large scene without physical contact. Prioritize who needs immediate intervention.</p>
                     <div class="app-features">
-                        <span class="feature-tag">Vital Sign Analysis</span>
-                        <span class="feature-tag">Movement Tracking</span>
-                        <span class="feature-tag">Health Alerts</span>
-                    </div>
-                </div>
-
-                <div class="app-card">
-                    <div class="app-icon">🏢</div>
-                    <h3>Smart Building Occupancy</h3>
-                    <p>Optimize building energy consumption by tracking occupancy patterns. Control lighting, HVAC, and security systems automatically.</p>
-                    <div class="app-features">
-                        <span class="feature-tag">Energy Optimization</span>
-                        <span class="feature-tag">Occupancy Tracking</span>
-                        <span class="feature-tag">Smart Controls</span>
-                    </div>
-                </div>
-
-                <div class="app-card">
-                    <div class="app-icon">🥽</div>
-                    <h3>AR/VR Applications</h3>
-                    <p>Enable full-body tracking for virtual and augmented reality applications without wearing additional sensors or cameras.</p>
-                    <div class="app-features">
-                        <span class="feature-tag">Full Body Tracking</span>
-                        <span class="feature-tag">Sensor-free</span>
-                        <span class="feature-tag">Immersive Experience</span>
+                        <span class="feature-tag">Multi-Victim Scan</span>
+                        <span class="feature-tag">Breathing Status</span>
+                        <span class="feature-tag">Triage Priority</span>
                     </div>
                 </div>
             </div>
 
             <div class="implementation-note">
-                <h3>Implementation Considerations</h3>
-                <p>While WiFi DensePose offers revolutionary capabilities, successful implementation requires careful consideration of environment setup, data privacy regulations, and system calibration for optimal performance.</p>
+                <h3>Deployment Notes</h3>
+                <p>Deploy ESP32 nodes at building entry points or toss them into a structure. The mesh self-organizes in seconds. Calibration takes one empty-room baseline sweep — then the system is operational for that environment.</p>
             </div>
         </section>
 
